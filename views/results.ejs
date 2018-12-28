@@ -1,0 +1,68 @@
+
+<% include partials/header %>
+<%function cap(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function noImg(empCheck){
+    if (empCheck == "N/A"){
+        return "https://i.imgur.com/AQzod1g.jpg";
+    } else{
+        return empCheck;
+    }
+}
+function sl (title){
+    var toRem = title.length - 25;
+    if (title.length > 25){ 
+        title = title.slice(0, -toRem) + "....";
+    }
+    return title;
+}
+%> 
+    <div id="top">
+        <div onclick="location.href = '/'" class="mid">MF</div>
+        <div id="oPs"> 
+            <form class="onPage" action="/results">
+                <input  class="search inpOP" type="text" placeholder="Search..." name="search" autocomplete="off">
+                <input  type="hidden" name="pg" value="1" >
+            </form>
+        </div>
+    </div> 
+    <span class="fix">o_o</span>
+    <div id="content">
+        <% console.log(data[0].Response );
+        for (i = 0; i < data.length; i++) { 
+        if(data[i].Response != "False"){
+            data[i].Search.forEach(function(movie){ %>
+            <div class="tile">
+                <a href="/results/<%= movie["imdbID"] %>">
+                <div class="poster">
+                    <img onload="if(this.height < 430){ 
+                        this.classList.add('imgFH')
+                        }" class="img" src="<%= noImg(movie["Poster"]) %>" alt="https://i.imgur.com/hNFQet1.png">
+                </div></a>    
+                <div class="info">
+                    <%= sl(movie["Title"]) %>
+                    <span class="year">
+                        <%= movie["Year"] %>
+                    </span>
+                    <br>
+                    <span class="<%= movie["Type"]%>">
+                        <%= cap(movie["Type"])%>
+                    </span>
+                    <a href="https://www.imdb.com/title/<%= movie["imdbID"] %>" class="imdb">imdb link</a>    
+            </div>
+    </div>
+        <% });}else{%>
+        <h1 id="error"><%=data[0].Error%> </h1>
+        <%break;
+        }
+          } %>
+          <div class="center"> <% if(Number(curPage) < 50 ){%>
+            <a class="btn" href ="http://localhost:1000/results?search=<%=curS%>&pg=<%=Number(curPage) + 1%>">></a>
+            <%}%>
+          <% if(Number(curPage) > 1){%>
+            <a class="btn" href ="http://localhost:1000/results?search=<%=curS%>&pg=<%=Number(curPage) - 1%>"><</a>
+          <%}%>
+          </div>
+    </div>
+<% include partials/footer %>

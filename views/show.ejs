@@ -1,0 +1,99 @@
+<% include partials/header %>
+<%
+function noImg(empCheck){
+    if (empCheck == "N/A"){
+        return "https://i.imgur.com/AQzod1g.jpg";
+    } else{
+        return empCheck;
+    }
+}
+%>
+<div id="top">
+    <div onclick="location.href = '/'" class="mid">MF</div>
+    <div id="oPs">
+        <form class="onPage" action="/results">
+            <input class="search inpOP" type="text" placeholder="Search..." name="search" autocomplete="off">
+            <input type="hidden" name="pg" value="1">
+        </form>
+    </div>
+</div>
+<span class="fix2">o_o</span>
+<div class="contain">
+    <div class="row">
+        <div class="col pad1">
+            <div class=" pad2">
+                <% if(movie[0].Response == 'True'){%>
+                <big>
+                    <%=movie[0].Title%>
+                    <mid>
+                        <%if(movie[0].Type == 'series'){%>
+                        <%=movie[0].totalSeasons%> season<%if(movie[0].totalSeasons > 1){%>s
+                        <%}}%> (<%=movie[0].Year%>)</mid>
+                    <span class="fRight">
+                        <%=movie[0].imdbRating%></span>
+                </big>
+                <br>
+                <%=movie[0].Rated%> |
+                <%=movie[0].Runtime%> |
+                <%=movie[0].Genre%>
+                <span class="fRight">
+                    <%=movie[0].imdbVotes%></span>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="sPoster">
+                <img onload="if(this.height < 430){ 
+                        this.classList.add('imgFH')
+                    }" class="img" src="<%= noImg(movie[0].Poster) %>"
+                    alt="https://i.imgur.com/hNFQet1.png">
+            </div>
+        </div>
+        <div class="col-9 wh">
+            <p style="padding-right: 10px;">
+                <%=movie[0].Plot%>
+            </p>
+            <b>Director:</b>
+            <%=movie[0].Director%>
+            <p>
+                <b>Writer:</b>
+                <%=movie[0].Writer%>
+            </p>
+            <b>Stars: </b>
+            <%=movie[0].Actors%>
+            <br>
+            <h3>Details</h3>
+            Language:
+            <%=movie[0].Language%>
+            <br>
+            Country:
+            <%=movie[0].Country%>
+            <br>
+            Awards:
+            <%=movie[0].Awards%>
+            <br>
+            <%if(movie[0].Type == 'movie'){%>
+
+            Box Office:
+            <%=movie[0].BoxOffice%>
+            <br>
+            Production Co:
+            <%=movie[0].Production%>
+            <br>MetaScore:
+            <br>
+            <div class="meta"><span>
+                    <%=movie[0].Metascore%><span></div>
+            <br>
+            <%}%>
+            <a href="https://www.imdb.com/title/<%=movie[0].imdbID%>" class="imdb nfo">More info on IMDB...</a>
+        </div>
+    </div>
+    <%}
+else{%>
+    <%=movie[0].Response%>
+    <%}%>
+</div>
+<% include partials/footer %>

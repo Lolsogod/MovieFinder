@@ -1,0 +1,11 @@
+<% include partials/header %>
+<div id="search-box">
+    <span class="big"> MovieFinder </span>
+    <br>
+    <br>
+    <form action="/results">
+        <input class="search" type="text" placeholder="Search..." name="search" autocomplete="off">
+        <input type="hidden" name="pg" value="1">
+    </form>
+</div>
+<% include partials/footer %>

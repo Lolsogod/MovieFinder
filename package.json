@@ -1,0 +1,22 @@
+{
+  "name": "mfinder",
+  "version": "0.2.5",
+  "description": "you can find any  movie at all",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "movie",
+    "finder",
+    "search",
+    "films"
+  ],
+  "author": "LolSoGood",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  }
+}

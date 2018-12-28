@@ -1,0 +1,212 @@
+body {
+    background-color: #282C34;
+    align-content: center;
+    color: #44A3EF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.big {
+    font-size: 75px;
+}
+
+.mid {
+    cursor: pointer;
+    margin-left: 10%;
+    display: inline-block;
+    font-size: 36px;
+}
+
+#search-box {
+    margin-top: 20%;
+    display: block;
+    text-align: -webkit-center;
+}
+
+.search {
+    color: #44A3EF;
+    border-radius: 20px;
+    padding-left: 10px;
+    width: 25%;
+    height: 35px;
+    border: 0;
+    background-color: #191c20;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.tile {
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 2.3vw;
+    margin-bottom: 20px;
+}
+
+#content {
+    margin: 1.5% auto;
+    max-width: 1600px;
+}
+
+.year {
+    color: #69B879;
+}
+
+.movie {
+    color: #D17F50;
+}
+
+.series {
+    color: #E05A54;
+}
+
+.imdb {
+    color: #E8B708;
+}
+
+.info {
+    width: 300px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #191c20;
+    text-align: center;
+}
+
+.poster {
+    overflow: hidden;
+    height: 430px;
+    width: 300px;
+}
+
+.imgFH {
+    height: 430px;
+}
+
+.imgFW {
+    width: 300px;
+}
+
+#error {
+    color: #E05A54;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.inpOP {
+    width: 300px;
+    background-color: #282C34;
+}
+
+.onPage {
+    margin: 0;
+    margin-top: -40px;
+    margin-left: 73%;
+    width: 300px;
+    display: inline-block;
+}
+
+#top {
+    height: 52px;
+    padding-top: 5px;
+    padding-bottom: px;
+    z-index: 100;
+    background-color: #191c20;
+    width: 100%;
+    position: fixed;
+}
+
+.btn {
+    float: right;
+    margin: 10px;
+    border-radius: 200px;
+    background-color: #191c20;
+    color: #44A3EF;
+    padding: 0.5em 1em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #44A3EF;
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 1px;
+}
+
+.center {
+    height: 60px;
+}
+
+.hid {
+    display: none;
+}
+
+.contain {
+
+    border-radius: 15px;
+    background-color: #21252B;
+    margin: 10% auto;
+    max-width: 1350px;
+}
+
+.fRight {
+    float: right;
+}
+
+big {
+    font-size: 40px
+}
+
+mid {
+    font-size: 20px;
+}
+
+.sPoster {
+    margin: 0 !important;
+    overflow: hidden;
+    height: 430px;
+    width: 300px;
+    border-bottom-left-radius: 15px;
+}
+
+.pad1 {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #191c20;
+}
+
+.pad2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.meta {
+    display: inline-block;
+    background-color: #66CC33;
+    color: white;
+    font-size: 13px;
+    height: 28px;
+    text-align: center;
+    padding-top: 6px;
+    width: 28px;
+}
+
+.wh {
+    color: ghostwhite;
+}
+
+.nfo {
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+}
