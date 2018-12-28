@@ -56,4 +56,5 @@ app.get("/results/:id", function (req, res) {
 
 });
 
-app.listen(process.env.PORT || 1000, process.env.IP); 
+app.listen(process.env.PORT || 1000, process.env.IP);
+console.log("Server started on port 1000"); 
