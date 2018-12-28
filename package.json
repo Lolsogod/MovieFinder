@@ -1,6 +1,6 @@
 {
   "name": "mfinder",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "description": "you can find any  movie at all",
   "main": "app.js",
   "scripts": {
