@@ -56,6 +56,4 @@ app.get("/results/:id", function (req, res) {
 
 });
 
-app.listen(1000, function () {
-    console.log('App listening on port 1000!');
-});
+app.listen(process.env.PORT, process.env.IP); 
