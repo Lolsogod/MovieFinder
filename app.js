@@ -45,7 +45,6 @@ app.get("/results/:id", function (req, res) {
     request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var data = [JSON.parse(body)];
-            console.log(data)
             res.render("show", {
                 movie: data
             });
@@ -57,4 +56,4 @@ app.get("/results/:id", function (req, res) {
 });
 
 app.listen(process.env.PORT || 1000, process.env.IP);
-console.log("Server started on port 1000"); 
+console.log("Server started on port 1000");
